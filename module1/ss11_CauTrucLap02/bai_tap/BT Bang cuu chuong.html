@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bang cuu chuong</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a,i,j;
+    a = "<table width='auto' border='1' cellspacing='10%' cellpadding='10px'>"
+
+        for (i = 1; i <= 9; i++){
+            a = a +"<tr>";
+            for (j=2; j <=9; j++){
+                x = i * j;
+                a = a + "<td>" +j +' x ' + i + ' = '+x +  "</td>";
+
+            }
+            a = a + "</tr>"
+        }
+        a = a + "</table>";
+        document.write(a);
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT QL san pham</title>
+</head>
+<body>
+    <input type="text" id="word">
+    <button onclick="convert()">Submit</button>
+    <input type="text" id="product" placeholder="Enter new product">
+    <button onclick="createNewProduct()">ADD</button>
+<div id="content">
+
+</div>
+</body>
+</html>
+<script>
+    let productList = ["Phone", "Tablet", "Laptop", "TV", "Sound", "Smart Device", "Watch"];
+    
+    function displayProduct() {
+        let table = '<table border="1px" style="border-collapse: collapse">' +
+                '<tr><th>Product Name</th> ' + '<th>Action</th></tr>';
+        for (let i = 0; i <productList.length; i++){
+            table += '<tr><td>' + productList[i] + '</td>' + '<td> <button onclick="editProduct('+ i + ')">Edit</button></td>'
+            + '<td> <button onclick="deleteProduct(' + i + ')">Delete</button> </td>' + '</tr>';
+        }
+        table += '</table>';
+        document.getElementById("content").innerHTML = table;
+    }
+
+    function deleteProduct(index) {
+        productList.splice(index,1);
+        displayProduct();
+    }
+    
+    function editProduct(index) {
+        productList[index] = prompt("Nhập lại tên product muốn chỉnh sửa: ");
+        displayProduct();
+    }
+    
+    function createNewProduct() {
+        let product = document.getElementById("product").value;
+        productList.push(product);
+        displayProduct();
+        document.getElementById("product").value  ="";
+    }
+    displayProduct();
+</script>

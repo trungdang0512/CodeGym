@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <canvas id="canvasRec" width="1368px" height="768px" style="border: 1px solid #d3d3d3;"></canvas>
+</div>
+
+</body>
+</html>
+<script>
+    class Rectangle{
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+        pCount(){
+            return (this.height + this.width)*2;
+        }
+        sCount(){
+            return this.height * this.width;
+        }
+        setHeight(height){
+            return this.height = height;
+        }
+        setWidth(width){
+            return this.width = width;
+        }
+        // drawnRec(){
+        //     var stx = document.getElementById("canvasRec").getContext("2d");
+        //     var rec = new Rectangle(4, 2);
+        //     ctx.beginPath();
+        //     ctx.fill;
+        // }
+    }
+
+    let newRec = new Rectangle(4, 3);
+    let p = newRec.pCount();
+    let s = newRec.sCount();
+    // let drawn = newRec.drawnRec();
+    alert("p : " + p + "; s : " + s);
+    //
+    // newRec.setHeight(5);
+    // newRec.setWidth(4);
+    // alert("p : " + newRec.pCount() + "; s : " + newRec.sCount());
+
+</script>

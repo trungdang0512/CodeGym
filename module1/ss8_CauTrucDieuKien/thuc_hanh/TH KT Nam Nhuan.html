@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>TH Nam Nhuan</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let year = parseInt(prompt("Enter the Year"));
+
+        /* nếu year chia hết cho 4, k chia hết cho 100: năm nhuận
+            nếu year chia hết cho 100, k chia hết cho 400: k nhuận
+            nếu year chia hết cho 100 và 400: năm nhuận
+            => year % 4 == 0 : nhuận
+                year % 400 != 0 && year % 100 == 0: k nhuận
+                year % 100 == 0 && year % 400 == 0: nhuận
+         */
+        if (year % 4 == 0) {
+            // xét th năm chia hết cho 4, nếu đúng thì xét th chia cho 100,sai là năm k nhuận
+            if (year % 100 == 0) {
+                // xét th chia hết cho 100, nếu đúng thì xét th chia cho 40,nếu sai thì là năm nhuận (%4==0 và %100!=0)
+                if (year % 400 == 0) {
+                    // xét th chia hết cho 400, nếu đúng là năm nhuận (%100==0 và %400==0, nếu sai là năm k nhuận (%100==0 và %400!==0)
+                    alert("Năm Nhuận");
+                } else {
+                    alert("Năm Không Nhuận");
+                }
+            } else {
+                alert("Năm Nhuận");
+            }
+            } else {
+            alert("Năm Không Nhuận");
+        }
+
+    </script>
+</html>

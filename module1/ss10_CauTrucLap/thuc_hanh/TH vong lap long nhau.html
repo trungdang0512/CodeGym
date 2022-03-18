@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>TH vong lap long nhau</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // let a;
+    // a = "<table border='1' width='300' cellSpacing='0' cellPadding='3'>"
+    // for (i = 1; i <= 10; i++) {
+    //     a = a + "<tr>";
+    //     for (j = 1; j <= 10; j++) {
+    //         a = a + "<td>" + i * j + "</td>";
+    //     }
+    //     a = a + "</tr>";
+    // }
+    // a = a + "</table>";
+    // document.write(a);
+
+    let a,i,j;
+    a = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    i = 1;
+    j = 1;
+    while (i <= 10){
+        a = a + "<tr>";
+        while (j <=10){
+            a = a +"<td>" + i * j + "</td>";
+            j++;
+        }
+        a = a + "</tr>";
+        j = 1;
+        i++;
+    }
+    a = a + "</table>";
+    document.write(a);
+</script>

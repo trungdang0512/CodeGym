@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>TH Khai Bao Toan Tu</title>
+</head>
+<body>
+<script>
+    let inputPhysics;
+    let inputChemistry;
+    let inputBiology;
+
+    inputPhysics = prompt('Nhập điểm môn Vật Lý');
+    inputChemistry = prompt('Nhập điểm môn Hóa Học');
+    inputBiology = prompt('Nhập điểm môn Sinh Học');
+
+    let physics = parseInt(inputPhysics);
+    let chemistry = parseInt(inputChemistry);
+    let biology = parseInt(inputBiology);
+
+    let tongdiem = physics + chemistry + biology;
+    let trungbinh= (physics + chemistry + biology) / 3;
+
+    alert('Điểm trung bình 3 môn là: ' + trungbinh );
+    alert('Tổng điểm 3 môn là: ' + tongdiem);
+
+
+</script>
+</body>
+</html>

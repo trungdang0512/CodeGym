@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH su kien chuot</title>
+</head>
+<body>
+    <form>
+        <img id="image" src="ball.png" style="width: 200px; height: auto">
+        <p>Click button below to move the image to right</p>
+        <input type="button" value="Move Right" onclick="moveRight()"><input type="button" value="Move Left" onclick="moveLeft()">
+    </form>
+</body>
+    <script>
+        let imgball = null;
+        imgball = document.getElementById('image');
+
+        function init(){
+            imgball = document.getElementById('image');
+            imgball.style.position = 'relative';
+            imgball.style.left = '0px';
+        }
+        function moveRight(){
+            imgball.style.left = parseInt(imgball.style.left) + 10 + 'px';
+        }
+        function moveLeft(){
+            imgball.style.left = parseInt(imgball.style.left) - 10 + 'px';
+        }
+        window.onload = init;
+
+    </script>
+
+</html>

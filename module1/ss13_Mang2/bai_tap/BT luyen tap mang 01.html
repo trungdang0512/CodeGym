@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap mang 01</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài 01:
+    // let sampleArray = [];
+    // let counter = 0;
+    //
+    // for (let i = 0; i < 10; i++){
+    //     sampleArray[i] = parseInt(prompt('Nhập phần tử thứ ' + i);
+    // }
+    //
+    // for (let i = 0; i < sampleArray.length; i++){
+    //     if (sampleArray[i] >= 10){
+    //         counter += 1;
+    //     }
+    // }
+    // alert('Tổng cộng có :' + counter + ' số lớn hơn hoặc bằng 10');
+
+
+
+    //Bài 02:
+    // let sampleArray = [];
+    //
+    // for (let i = 0; i < 10; i++){
+    //     sampleArray[i] = parseInt(prompt('Nhập phần tử thứ ' + i));
+    //     while (sampleArray[i] == sampleArray[i -1]){
+    //         sampleArray[i] = parseInt(prompt('Không nhập phần tử trùng với phần tử đã có'));
+    //     }
+    // }
+    // console.log(sampleArray);
+    // let max = 0;
+    // let position = 0;
+    //
+    // for (let i = 0; i < 10; i++){
+    //     if (sampleArray[i] > max){
+    //         max = sampleArray[i];
+    //     }
+    // }
+    // for (let i = 0; i < 10; i++){
+    //     if (max == sampleArray[i]){
+    //         position = i;
+    //     }
+    // }
+    // alert('Số lớn nhất trong mảng là: ' + max + ' , vị trí nằm ở ' + position);
+
+
+
+    //Bài 03:
+    // let sampleArray = [];
+    // let max = 0;
+    // let sum =0;
+    // let num = parseInt(prompt('Nhập số lượng phần tử trong mảng: '));
+    // while (num < 0 ){
+    //     num = parseInt(prompt('Nhập số lượng phần tử trong mảng: '));
+    // }
+    //
+    // for (let i = 0; i < num; i ++ ){
+    //     sampleArray[i] = parseInt(prompt('Nhập phần tử thứ ' + i));
+    // }
+    // for (let i=0; i < sampleArray.length; i++){
+    //     if (sampleArray[i] > max){
+    //         max = sampleArray[i];
+    //     }
+    // }
+    // for (let i = 0; i <sampleArray.length; i++){
+    //     sum += sampleArray[i];
+    // }
+    //
+    // result = sum / sampleArray.length;
+    // alert('Số lớn nhất là: ' + max + ' và giá trị trung bình các phần tử là: ' + result);
+
+
+
+
+    //Bài 04:
+    // let sampleArray = [];
+    // let num = parseInt(prompt('Nhập số lượng phần tử trong mảng: '));
+    // while (num < 0 ){
+    //     num = parseInt(prompt('Nhập số lượng phần tử trong mảng: '));
+    // }
+    //
+    // for (let i = 0; i < num; i ++ ){
+    //     sampleArray[i] = parseInt(prompt('Nhập phần tử thứ ' + i));
+    // }
+    //
+    // sampleArray = sampleArray.reverse();
+    // console.log(sampleArray);
+
+
+
+    //Bài 05:
+    // let sampleArray = [];
+    // let counter = 0;
+    // let num = parseInt(prompt('Nhập số lượng phần tử trong mảng: '));
+    // while (num < 0 ){
+    //     num = parseInt(prompt('Nhập số lượng phần tử trong mảng: '));
+    // }
+    //
+    // for (let i = 0; i < num; i ++ ){
+    //     sampleArray[i] = parseInt(prompt('Nhập phần tử thứ ' + i));
+    // }
+    //
+    // for (let i= 0; i < sampleArray.length; i++){
+    //     if (sampleArray[i] < 0){
+    //         counter += 1;
+    //     }
+    // }
+    // alert('Mảng có tổng cộng ' + counter + ' số nguyên âm');
+
+
+
+    //Bài 06:
+    // let sampleArray = [];
+    // let flag = false;
+    //
+    // for (let i = 0; i < 10; i++){
+    //     sampleArray[i] = parseInt(prompt('Nhập phần tử thứ ' + i));
+    // }
+    // let inputNum = parseInt(prompt('Nhập số cần tìm'));
+    //
+    // for (let i =0; i < sampleArray.length; i++){
+    //     if (inputNum == sampleArray[i]){
+    //         flag = true;
+    //         break;
+    //     }
+    // }
+    // if (flag == true){
+    //     alert(inputNum + ' thuộc trong mảng');
+    // }else {
+    //     alert(inputNum + ' không thuộc trong mảng');
+    // }
+
+
+
+    //Bài 07:
+    // let sampleArray = [];
+    //
+    // for (let i = 0; i < 10; i++){
+    //     sampleArray[i] = parseInt(prompt('Nhập phần tử thứ ' + i));
+    // }
+    // let inputNum = parseInt(prompt('Nhập số cần tìm'));
+    // for (let i = 0; i  < sampleArray.length; i++){
+    //     if (inputNum == sampleArray[i]){
+    //         sampleArray.splice(i,1);
+    //         i--;
+    //     }
+    // }
+    // console.log(sampleArray);
+
+
+
+    //Bài 08:
+    // let sampleArray = [];
+    // for (let i = 0; i < 10; i++){
+    //     sampleArray[i] = parseInt(prompt('Nhập phần tử thứ ' + i));
+    // }
+    //
+    // sampleArray.sort(function (a,b) {
+    //     return a - b;
+    // });
+    // console.log(sampleArray);
+
+
+
+    //Bài 09:
+    let sampleArrayA = [];
+    let sampleArrayB = [];
+    let sampleArrayC = [];
+
+    for (let i = 0; i < 10; i++){
+        sampleArrayA[i] = parseInt(prompt('Nhập phần tử thứ ' + i));
+    }
+
+    for (let i = 0; i < 10; i++){
+        sampleArrayB[i] = parseInt(prompt('Nhập phần tử thứ ' + i));
+    }
+    document.writeln(sampleArrayA.concat(sampleArrayB));
+
+
+</script>

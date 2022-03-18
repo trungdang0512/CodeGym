@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH OOP</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // let MyDate = function (day, month, year) {
+    //     this.day = day;
+    //     this.month = month;
+    //     this.year = year;
+    //     this.getDate = function() {
+    //         return this.day;
+    //     }
+    //
+    //     this.getMonth = function() {
+    //         return this.month;
+    //     }
+    //     this.getYear = function() {
+    //         return this.year;
+    //     }
+    //
+    //     this.setDay = function(day) {
+    //         this.day = day;
+    //     }
+    //     this.setMonth = function(month) {
+    //         this.month = month;
+    //     }
+    //     this.setYear = function(year) {
+    //         this.year = year;
+    //     }
+    //     this.setDate = function(day, month, year){
+    //         this.day = day;
+    //         this.month = month;
+    //         this.year = year;
+    //     }
+    // }
+    //
+    //
+    //
+    // let date = new MyDate(21,2,2022);
+    // let day = date.getDate();
+    // let month = date.getMonth();
+    // let year = date.getYear();
+    //
+    // alert(day + "/" + month + "/" + year);
+    //
+    // date.setDay(10);
+    // date.setMonth(10);
+    // date.setYear(2019);
+    //
+    // alert(day + "/" + month + "/" + year);
+    //
+    // date.setDate(20,2,2021);
+    // day = date.getDate();
+    // month = date.getMonth();
+    // year = date.getYear();
+    // alert(day + "/" + month + "/" + year);
+
+    class MyDate{
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year  = year;
+        }
+        getDay(){
+            return this.day;
+        }
+        getMonth(){
+            return this.month;
+        }
+        getYear(){
+            return this.year;
+        }
+        setDay(day){
+            this.day = day;
+        }
+        setMonth(month){
+            this.month = month;
+        }
+        setYear(year){
+            this.year = year;
+        }
+        setDate(day, month, year){
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+    }
+
+    let obj = new MyDate(20,20,2020);
+    let day = obj.getDay();
+    let month = obj.getMonth();
+    let year = obj.getYear();
+    alert(day + "/" + month + "/" + year);
+
+    obj.setDay(10);
+    obj.setMonth(10);
+    obj.setYear(2019);
+    day = obj.getDay();
+    month = obj.getMonth();
+    year = obj.getYear();
+
+    alert(day + "/" + month + "/" + year);
+
+
+
+
+
+
+    //     Cách xây dựng đơn giản hơn:
+//         // <!--  Cú pháp khai báo  -->
+// // class ClassName {
+// //      constructor(tham số 1, tham số 2,..){
+// //              this.thuộc tính 1= tham số 1;
+// //              this.thuộc tính 2= tham số 2;
+// //              this.....;
+// //         }
+// // }
+//         class MyDate {
+//             constructor(day, month, year) {
+//                 this.day = day;
+//                 this.month = month;
+//                 this.year = year;
+//             }
+//
+//             getDay() {
+//                 return this.day;
+//             }
+//
+//             getMonth() {
+//                 return this.month;
+//             }
+//             getYear() {
+//                 return this.year;
+//             }
+//
+//             setDay(day){
+//                 this.day = day;
+//             }
+//         }
+//
+//
+//
+//     let obj1 = new MyDate(21, 2, 2022);
+//     console.log(obj1.getDay());
+</script>

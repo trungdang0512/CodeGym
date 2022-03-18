@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <p id="result">.............</p>
+    <input type="button" value="1" onclick="no1()"> <input type="button" value="2" onclick="no2()"> <input type="button" value="3"> <input type="button" value="+" onclick="add()"><br><br>
+    <input type="button" value="4"> <input type="button" value="5"> <input type="button" value="6"> <input type="button" value="-"><br><br>
+    <input type="button" value="7"> <input type="button" value="8"> <input type="button" value="9"> <input type="button" value="x"><br><br>
+    <input type="button" value="C"> <input type="button" value="0"> <input type="button" value="=" onclick="result()"> <input type="button" value="/"><br><br>
+
+</body>
+<script>
+    let a = null;
+
+    function no1(){
+        a = 1;
+        document.getElementById('result').innerHTML = ('1');
+        console.log(a);
+    }
+
+    let b = null;
+    function no2(){
+        b = 2;
+        document.getElementById('result').innerHTML = ('2');
+        console.log(b);
+    }
+    let c = null;
+    function add(){
+        c = '+';
+        console.log(c);
+    }
+    let rs = null;
+    function result(){
+        rs = a + c + b;
+        console.log(rs);
+    }
+</script>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+</html>
+<head>
+	<Title>BT tao form don gian</Title>
+	<meta charset="utf-8"/>
+	<style>
+		.address{
+			width: 200px;
+			height: 100px;
+			resize: none;
+		}
+	</style>
+</head>	
+<body>
+	<form action="https://cuahangthuysinh.vn/" method="get">
+		<table style="background-color: #f5e88e;">
+			<th style="background-color: #4fdecc; padding: 3%; color: #215988;" colspan="2">ĐĂNG KÝ HỌC VIÊN</th>
+			<tr>
+				<td style="color: #1f41d3">
+					Họ và tên
+				</td>
+				<td>
+					<input type="text" name="hovaten">
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #1f41d3">
+					Ngày sinh
+				</td>
+				<td>
+					<input type="date" name="ngaysinh">
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #1f41d3">
+					Giới tính
+				</td>
+				<td>
+					<input type="radio" name="sex" value="nam">Nam
+					<input type="radio" name="sex" value="nu">Nữ
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #1f41d3">
+					Địa chỉ
+				</td>
+				<td>
+					<textarea class="address"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #1f41d3">
+					Lớp
+				</td>
+				<td>
+					<select>
+						<option selected>-Chọn lớp-</option>
+						<option value="10A1">10A1</option>
+						<option value="10A2">10A2</option>
+						<option value="10A3">10A3</option>
+						<option value="11A1">11A1</option>
+						<option value="11A2">11A2</option>
+						<option value="11A3">11A3</option>
+						<option value="12A1">12A1</option>
+						<option value="12A2">12A2</option>
+						<option value="12A3">12A3</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #1f41d3">
+					Email
+				</td>
+				<td>
+					<input type="text" name="email">
+				</td>
+			</tr>
+			<tr>
+				<td style="color: #1f41d3">
+					Số điện thoại
+				</td>
+				<td>
+					<input type="number" name="phone">
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value="Đăng ký">
+					<input type="reset" value="Nhập lại">
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+</body>
+
+</html>

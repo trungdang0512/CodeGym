@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH chuyen doi nhiet do</title>
+</head>
+<body>
+<p>
+<label>Fahrenheit</label>
+<input id="inputF" type="number" placeholder="Fahrenheit Here"
+       oninput="tempConverter(this.value)" onchange="tempConverter(this.value)">
+<!--    lệnh oninput và onchange: khi type vào input thì sẽ chạy hàm được gọi,
+oninput: chạy hàm ngay khi type vào,
+onchange: type xong click chuột ra hàm mới chạy-->
+<!--    ( this.value : lấy giá trị type làm tham số cho hàm )-->
+</p>
+<p>Celsius: <span id="outputC"></span> </p>
+
+</body>
+</html>
+<script>
+function tempConverter(num) {
+    num = parseFloat(num);
+    document.getElementById("outputC").innerHTML = (num -32) / 1.8;
+
+}
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="result">Hello!</h1>
+</body>
+    <script>
+        let user = prompt('Input the UserName! Please!');
+        if (user === 'Admin') {
+            let pass = prompt('Enter the Password! Please!');
+            if (pass == 'TheMaster') {
+                document.getElementById("result").innerHTML = ('Welcome!Boss!');
+            }else if (pass == '') {
+                document.getElementById("result").innerHTML = ('Canceled');
+            }else {
+                document.getElementById("result").innerHTML = ('Wrong Password');
+            }
+        } else {
+            document.getElementById("result").innerHTML = ('I Dont Know You! Fuck Of!');
+        }
+    </script>
+</html>

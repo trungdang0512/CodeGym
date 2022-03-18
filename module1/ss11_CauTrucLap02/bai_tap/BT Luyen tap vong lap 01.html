@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>BT vong lap 01</title>
+</head>
+<body>
+<div align="center" style="vertical-align: center">
+    <button id="play" onclick="click2play()">Click here to play!!!</button>
+</div>
+</body>
+</html>
+<script>
+    // Bai 1:
+    // for (x = 1; x <= 100; x++){
+    //     document.write(x + "<br/>");
+    //     console.log(x);
+    //     if (x === 99){
+    //         alert('done');
+    //     }
+    // }
+
+    // Bai 2:
+    // x = prompt('Vui lòng nhập nhiệt độ')
+    // while (x <20){
+    //     x = prompt('Vui lòng tăng nhiệt độ trên 20');
+    //
+    // } while (x > 100){
+    //     x = prompt('Vui lòng giảm nhiệt độ xuống dưới 100');
+    // }document.write('Nhiệt độ là ' + x);
+
+    // Bai 3:
+    // for (n =1 ,a= 0, b = 1; n <= 10; n++){
+    //     document.write(a + '<br>');
+    //     document.write(b + '<br>');
+    //     a1 = a + b;
+    //     b1 = b + a1;
+    //     a = a1;
+    //     b= b1;
+    //     console.log(a);
+    //     console.log(b);
+    // }
+
+    // Bai 4:
+    // let a = 1;
+    // let b = 1;
+    //     while (a % 5 !== 0){
+    //    let a1 = a + b;
+    //    let b1 = b + a1;
+    //     a = a1;
+    //     b= b1;
+    //     console.log(a);
+    //     console.log(b);
+    // } document.write(a);
+
+    // Bai 5:
+    // let a = 0;
+    // let b = 1;
+    // let n = 0;
+    // let y = 0;
+    //     while (n < 10){
+    //         x = a + b;
+    //         y += x;
+    //
+    //         n += 1;
+    //
+    //         let a1 = a + b;
+    //         let b1 = b + a1;
+    //         a = a1;
+    //         b= b1;
+    // }document.write(y);
+
+    // Bai 6:
+    // let a = 1;
+    // let n = 0;
+    // let a1 = 0;
+    // while (n < 30){
+    //     for (a = 0; n < 30 ; a++) {
+    //         if (a % 7 === 0) {
+    //             n += 1;
+    //             a1 += a;
+    //
+    //         }
+    //     }
+    // }document.write(a1 +'<br>');
+
+    // Bai 7:
+    // for (a = 1; a <=100; a++) {
+    //     if (a % 3 ===0 && a% 5===0){
+    //         document.write(a +' FizzBuzz' +'<br>');
+    //     } else if (a % 5 === 0){
+    //         document.write(a + ' Buzz' + '<br>');
+    //     }else if (a % 3 === 0) {
+    //         document.write(a + ' Fizz' + '<br>');
+    //     }else {
+    //         document.write(a + '<br>');
+    //     }
+    // }
+
+
+    function click2play() {
+        let min = Number(prompt('Nhập số min trong khoảng cần đoán'));
+        let max = Number(prompt('Nhập số max trong khoảng cần đoán'));
+        let result = Number(Math.floor(Math.random() * (max - min)) + min);
+
+        let num = Number(prompt('Nhập số bạn dự đoán'));
+        let n = 1;
+
+        while (n < 3) {
+            while (num !== result) {
+
+                if (num < result) {
+                    let num = Number(prompt('Số bạn đoán nhỏ hơn kết quả, xin đoán lại'));
+                    n += 1;
+                } else if (num > result) {
+                    let num = Number(prompt('Số bạn đoán lớn hơn kết quả, xin đoán lại'));
+                    n += 1;
+                }
+
+                if (n === 3) {
+                    alert('Bạn đã đoán sai 3 lần vui lòng chơi lại');
+                    break;
+                    console.log(result);
+                }
+            }
+            if (num === result) {
+                document.write('Chúc mừng kết quả là ' + result);
+            }
+        }
+
+    }
+
+
+</script>

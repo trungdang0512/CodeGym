@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YC 03</title>
+</head>
+<body>
+<div id="menu"></div>
+<p>Total : </p>
+<p id="priceAll"></p>
+<!--<table border="1px" style="border-collapse: collapse">-->
+<!--<tr>-->
+<!--    <th>Drink</th>-->
+<!--    <th>Price</th>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td>Cafe</td>-->
+<!--    <td>15000</td>-->
+<!--</tr>-->
+<!--</table>-->
+</body>
+</html>
+<script>
+
+    //Bài 1:
+    // let numA = [];
+    // let numB = [];
+    // let result = 0;
+    //
+    // let n = prompt('nhập số lượng phần tử trong mảng');
+    // while (n <=  0){
+    //     n = prompt('nhập số lượng phần tử trong mảng');
+    // }
+    // for (let i = 0; i < n; i++) {
+    //     numA[i] = prompt('nhập phần tử thứ ' + i +' vào mảng');
+    // }
+    //
+    // for (let i = 0; i < numA.length; i++) {
+    //     result = parseInt(numA[0]);
+    //     for (let j = 1; j <= i; j++) {
+    //         result += parseInt(numA[j]);
+    //     }
+    //     numB[i] = result;
+    // }
+    // console.log(numB);
+
+
+    //Bài 2:
+    // let arrayA = [7,2,5,3,5,3];
+    // let arrayB = [7,2,5,4,6,3,5,3];
+    // let arrayC = [];
+    //
+    // for (let i = 0; i < arrayB.length; i++){
+    //     let testNum = arrayB[i];
+    //     let check = true;
+    //     for (let j = 0; j < arrayA.length; j++){
+    //         if (testNum === arrayA[j]) {
+    //             check = false;
+    //             break;
+    //         }
+    //     }
+    //     if (check === true){
+    //         arrayC.push(testNum);
+    //     }
+    // }
+    // console.log(arrayC);
+
+
+    //Bài 3:
+    // let numeratorsArray = [12,2,5];
+    // let denominatorsArray = [6,3,4];
+    // let max = numeratorsArray[0] / denominatorsArray[0];
+    // let a = 0;
+    //
+    // for (let i = 0; i < numeratorsArray.length; i++){
+    //
+    //     fraction = numeratorsArray[i] / denominatorsArray[i];
+    //     if (max < fraction){
+    //         max = fraction;
+    //         a = i;
+    //     }
+    // }console.log(a);
+
+
+
+    //Bài 4:
+    // let inputNum = prompt("Input the Number");
+    //
+    // while (isNaN(inputNum) == true){
+    //     inputNum = prompt("Input the Number");
+    // }
+    // let newAr = inputNum.split("");
+    // console.log(newAr);
+    // let arNum = [1,2,3,4,5,6,7,8,9];
+    // let arEng = ["one","two","three","four","five","six","seven","eight","nine"];
+    // let blankArr = [];
+    //
+    // for (let i = 0; i < newAr.length; i++) {
+    //     let result = newAr[i];
+    //     for (let j = 0; j < arNum.length; j++) {
+    //         if (result == arNum[j]) {
+    //             blankArr.push(arEng[j]);
+    //         }
+    //     }
+    // }console.log(blankArr);
+    // document.writeln(blankArr);
+
+
+
+    //Bài 5:
+    let drinkMenu = ["Cafe","Cam Vắt","Nước ép cà rốt","Nước ép cà chua","Nước lọc","Nước dừa"];
+    let priceMenu = [15000,25000,25000,25000,10000,20000];
+    let amount = [0,0,0,0,0,0];
+    let totalPrice = 0;
+
+    function menuClick() {
+        let table = '<table border="1px" style="border-collapse: collapse">' + '<tr><th>Drink</th>' + '<th>Price</th>' + '<th>Amount</th></tr>';
+
+        for (let i = 0; i < drinkMenu.length; i++) {
+            table += '<tr><td>' + drinkMenu[i] + '</td>' + '<td>' + priceMenu[i] + '</td>' + '<td>' + amount[i] + '</td>' + '<td><button onclick ="assignMoney(' + i + ')">Apply</button></td>' + '</tr>';
+        }
+        table += '<tr><td><button onclick="callMenu()">Call Drink</button></td></tr></table>';
+        document.getElementById("menu").innerHTML = table;
+    }
+
+    menuClick();
+
+function assignMoney(index) {
+    amount[index] += 1;
+    totalPrice += parseInt(priceMenu[index]);
+    document.getElementById("priceAll").innerHTML = totalPrice;
+    menuClick();
+
+}
+function callMenu() {
+    alert("Món của bạn đã được order");
+    amount = [0,0,0,0,0,0];
+    menuClick();
+    totalPrice = 0;
+    console.log(totalPrice);
+    document.getElementById("priceAll").innerHTML = totalPrice;
+}
+</script>

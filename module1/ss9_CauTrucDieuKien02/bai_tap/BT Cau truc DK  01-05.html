@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>BT 05</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let test = Number(prompt("Nhập điểm bài kiểm tra"));
+    let midExam = Number(prompt("Nhập điểm thi giữa kỳ"));
+    let finalExam = Number(prompt("Nhập điểm thi cuối kỳ"));
+
+    let finalResult = (test + midExam + finalExam)/3;
+    if (finalResult >= 9.0) {
+        alert(" Hạng A");
+    } else if (finalResult >= 7.0){
+        alert(" Hạng B");
+    }else if (finalResult >= 5.0){
+        alert(" Hạng C");
+    }else {
+        alert("Hạng F");
+    }
+</script>

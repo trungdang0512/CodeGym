@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT chuyen doi</title>
+</head>
+<body>
+<h2>Feet to Meter Conversion </h2>
+<input id="inputFeet" placeholder="Please input Feet" type="number" oninput="convertFeet(this.value)">
+<p>Meter: <span id="meterResult"></span> </p>
+<hr>
+<h2>Meter to Feet Conversion </h2>
+<input id="inputMeter" placeholder="Please input Meter" type="number" oninput="convertMeter(this.value)">
+<p>Feet: <span id="feetResult"></span> </p>
+</body>
+</html>
+<script>
+    function convertFeet(num) {
+        num =  parseInt(num);
+        document.getElementById("meterResult").innerHTML = num * 0.305;
+    }
+    function convertMeter(num) {
+        num = parseInt(num);
+        document.getElementById("feetResult").innerHTML = num * 3.279;
+    }
+</script>

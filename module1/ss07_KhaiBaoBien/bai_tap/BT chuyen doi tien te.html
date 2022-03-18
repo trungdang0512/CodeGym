@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>BT form chuyen doi tien te</title>
+</head>
+<body>
+            <table cellpadding="10px">
+            <tr>
+                <th>Amount</th>
+                <td></td>
+                <th>From Currency</th>
+                <td></td>
+                <th>To Currency</th>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="number" id='inputvnd'></td>
+                <td></td>
+                <td>
+                    <select id="ngoaite">
+                        <option name="vnd">VietNam Dong</option>
+                        <option name="jpy">Yen</option>
+
+                    </select>
+                </td>
+                <td></td>
+                <td>
+                    <select>
+                        <option name="usd">USD</option>
+
+                    </select>
+                </td>
+                <td>
+                    <button onclick="result()">Convert</button>
+                </td>
+            </tr>
+
+        </table>
+            <h2><p id="result"></p></h2>
+
+<script>
+
+        function result() {
+            let x = Number(document.getElementById('inputvnd').value);
+            let y = 23000;
+            let vndtousd = x / y;
+            document.getElementById('result').innerHTML = document.getElementById('inputvnd').value + " VND sẽ tương đương " + vndtousd + ' USD ';
+        }
+
+</script>
+</body>
+</html>

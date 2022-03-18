@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT ham 01</title>
+</head>
+<body>
+<!--Bài 1:-->
+<!--<input type="text" id="typeHere" >-->
+<!--<input type="button" value="Click" onclick="alertMessage()">-->
+
+
+<!--Bài 2:-->
+<!--<input type="number" id="typeHere" oninput="addNum(this.value)">-->
+<!--<p>Result: <span id="result"></span> </p>-->
+</body>
+</html>
+<script>
+    // Bài 1:
+    // function alertMessage() {
+    //     let text = document.getElementById("typeHere").value;
+    //     alert(text);
+    // }
+
+
+    // Bài 2:
+// function addNum(num) {
+//     let num1 = parseInt(num);
+//     document.getElementById("result").innerHTML = num1 += 1;
+// }
+
+
+    // Bài 3:
+    // function testNumber(a,b) {
+    //     if (a > b){
+    //         alert(a + " lớn hơn " + b);
+    //     }else if (a <= b){
+    //         let sum = a + b;
+    //         alert("Tổng 2 số là " + sum);
+    //     }
+    // }
+    //
+    // let a = parseInt(prompt("Input number 1:"));
+    // let b = parseInt(prompt("Input number 2"));
+    // let result = testNumber(a,b);
+
+
+    // Bài 4:
+    // function addNumbers() {
+    //     alert(result);
+    //     firstNum = 4;
+    //     secondNum = 8;
+    //     result = firstNum + secondNum;
+    //     alert(result);
+    //     return result;
+    // }
+    // result = 0;
+    // result = addNumbers();
+
+
+    // Bài 5:
+
+    function searchStar(inputStar) {
+        let star = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+        let constellation = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+        let searchingResult = false;
+        for (let i = 0; i < star.length; i++){
+            if (inputStar == star[i]){
+                alert(inputStar + " thuộc chòm sao " + constellation[i]);
+                searchingResult = true
+                break;
+            }
+        } if (searchingResult == false){
+            alert("Vui lòng nhập đúng tên ngôi sao");
+        }
+    }
+    let inputStar = prompt("Input the name of star");
+    let result = searchStar(inputStar);
+
+</script>

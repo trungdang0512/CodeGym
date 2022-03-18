@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT Chi so can nang</title>
+</head>
+<body>
+
+</body>
+<script>
+    let w = parseInt(prompt('Input Your Weight (Kilogram)'));
+    let h = parseInt(prompt('Input Your Height (Metre)'))
+    a = w / (h ^ 2);
+    let bmi = parseInt(a);
+
+    if (bmi < 18.5) {
+        alert('You are Underweight');
+    }else if (bmi < 25) {
+        alert('You are Normal');
+    }else if (bmi < 30) {
+        alert('You are Overweight');
+    }else {
+        alert('Obese');
+    }
+</script>
+</html>

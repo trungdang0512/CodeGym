@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>TH do-while</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // let a = null;
+    // do {
+    //     a = Number(prompt("nhập vào số từ 1 đến 10"));
+    //     console.log(a);
+    // }while (a >= 1 && a <= 10);
+    // alert("Số bạn vừa nhập là " + a);
+
+        let a;
+        a = "<table border='1' width='300' cellSpacing='0' cellPadding='3'>"
+            for (i = 1; i <= 10; i++) {
+                a = a + "<tr>";
+                for (j = 1; j <= 10; j++) {
+                a = a + "<td>" + i * j + "</td>";
+            }
+                a = a + "</tr>";
+            }
+            a = a + "</table>";
+        document.write(a);
+
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Tạo form đơn giản</title>
+    <style>
+        .title{
+            background-color: darkorange;
+            width: 30%;
+            color: antiquewhite;
+            vertical-align: center;
+            text-align: center;
+                }
+        .name{
+            float: left;
+            text-align: right;
+            margin-right: 1%;
+            margin-top: 0.25%;
+            color: darkblue;
+        }
+        .checkbox{
+            float: left;
+            margin-right: 1%;
+            text-align: left;
+            color: darkorange;
+        }
+
+        .button{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">
+        <H2>SỞ THÍCH CỦA BẠN</H2>
+    </div>
+    <div>
+        <form action="https://www.youtube.com/watch?v=wCqbIoaOgDk" method="get">
+                <div class="name">
+                    <p>Họ và tên</p>
+                    <p>Email</p>
+                    <p>Sở thích</p>
+                </div>
+                <div class="checkbox">
+                    <p><input type="text" name="yourname"></p>
+                    <p><input type="text" name="email"></p>
+                    <p>
+                        <input type="checkbox" name="hobby">Thể thao
+                        <input type="checkbox" name="hobby">Âm nhạc
+                        <input type="checkbox" name="hobby">Đọc sách
+                    </p>
+                    <p>
+                        <input type="checkbox" name="hobby">Lướt web
+                        <input type="checkbox" name="hobby">Chơi game
+                        <input type="checkbox" name="hobby">Điện ảnh
+                    </p>
+                    <p>
+                        <input type="checkbox" name="hobby">Du lịch
+                    </p>
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="Gửi thông tin"><input type="reset" value="Nhập lại">
+                </div>
+        </form>
+    </div>
+
+
+</body>
+</html>

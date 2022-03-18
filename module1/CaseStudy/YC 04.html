@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YC 04</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    //Bài 1:
+    // function finderLongest (name) {
+    //     let finder = name.split(" ");
+    //     let maxLenght = 0;
+    //     let result = '';
+    //
+    //     for (let j = 0; j < finder.length; j++) {
+    //         if (finder[j].length > maxLenght) {
+    //             maxLenght = finder[j].length;
+    //             result = finder[j];
+    //         }
+    //     }
+    //     console.log(result);
+    //     return result;
+    // }
+    //
+    // function checkName(name) {
+    //     document.writeln(name);
+    //     name = name.toLowerCase();
+    //     let a = name.split("");
+    //     console.log(a);
+    //     for (let i = 0; i < a.length; i++) {
+    //         if (i == 0) {
+    //             a[i] = a[i].toUpperCase();
+    //         }
+    //         if (a[i] === a[i - 1] && a[i - 1] === " ") {
+    //             a.splice(i - 1, 1);
+    //             i--;
+    //         }
+    //         if (a[i - 1] == " ") {
+    //             a[i] = a[i].toUpperCase();
+    //         }
+    //     }
+    //     a = a.join("");
+    //     document.writeln('<br/>' + 'result : ' + a);
+    //     let checkTool = finderLongest(a);
+    //     document.writeln('<br/>' + checkTool + ' là chữ dài nhất trong cụm');
+    // }
+    //
+    // let name = prompt("nhập tên vào");
+    // let check = checkName(name);
+
+
+    //Bài 2:
+
+    // let a = "cabcabbdfdgggba";
+    // let wordInput = a.split('');
+    // console.log(wordInput);
+    //
+    // let counter = 0;
+    //
+    // for (let j = 0; j < wordInput.length; j++) {
+    //     let checker = wordInput[j];
+    //     for (let i = j+1; i <= wordInput.length; i++) {
+    //         if (checker == wordInput[i]) {
+    //             wordInput.splice(i, 1);
+    //             i--;
+    //         }
+    //     }
+    // } counter = wordInput.length;
+    // alert(counter);
+
+
+
+    //Bài 3:
+    let a = "aabcc";
+    let b = "adcaa";
+    let arrayA = a.split('');
+    let arrayB = b.split('');
+    let counter = 0;
+
+    for (let i = 0; i < arrayA.length; i ++){
+        for (let j = 0; j < arrayB.length; j++ ){
+            if (arrayA[i] == arrayB[j]){
+                arrayA.splice(i,1);
+                arrayB.splice(j,1);
+                i--;
+                j--;
+                counter += 1;
+                // break;
+            }
+        }
+    }console.log(counter);
+
+
+
+</script>

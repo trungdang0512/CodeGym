@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>BT 07</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let minute = Number(prompt("Nhập tổng phút đã gọi"));
+    if (minute <= 50){
+        let cost = 25000 + (minute * 600);
+        alert('Cước điện thoại của bạn là ' + cost);
+    } else if (minute <= 200){
+        let extraMinute = minute - 50;
+        let cost = 25000 + 30000 + (extraMinute * 400);
+        alert('Cước điện thoại của bạn là ' + cost);
+    }else {
+        let  extraMinute = minute - 200;
+        let cost = 25000 + 30000 +60000 + (extraMinute * 200);
+        alert('Cước điện thoại của bạn là ' + cost);
+    }
+</script>

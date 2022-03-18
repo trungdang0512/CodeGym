@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YC 05</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài 1:
+    // let sampleArray = [];
+    // let m = parseInt(prompt('nhập số hàng'));
+    // let n = parseInt(prompt('nhập số cột'));
+    //
+    // while ( m <= 0 || n <=0){
+    //     m = parseInt(prompt('nhập lại số hàng'));
+    //     n = parseInt(prompt('nhập lại số cột'));
+    // }
+    // for (let i = 0; i < m; i++){
+    //     sampleArray[i] = [];
+    //     for (let j = 0; j < n; j++){
+    //         sampleArray[i][j] = parseInt(prompt('nhập phần tử tọa độ là ' + i + ':' + j));
+    //     }
+    // }
+    // console.log(sampleArray);
+    // let result = 0;
+    // for ( let i =0; i < m; i++){
+    //     for (let j = 0; j < n; j++){
+    //         if (sampleArray[i][j] % 2 == 0){
+    //             result += sampleArray[i][j];
+    //         }
+    //     }
+    // }
+    // console.log(result);
+
+
+    //Bài 2:
+    // let numArray = [];
+    // let m = parseInt(prompt('Nhập số hàng'));
+    // let n = parseInt(prompt('Nhập số cột'));
+    // let allInteger = [];
+    //
+    // while (m <= 0 || n <= 0){
+    //     m = parseInt(prompt('Nhập số hàng'));
+    //     n = parseInt(prompt('Nhập số cột'));
+    // }
+    //
+    // for (let i = 0; i < m; i++){
+    //     numArray[i] = [];
+    //     for (let j = 0; j < n; j++){
+    //         numArray[i][j] = parseInt(prompt('nhập số vào tọa độ : ' + i + ':' + j));
+    //     }
+    // }
+    // console.log(numArray);
+    //
+    //
+    //
+    // for (let i = 0; i < m; i++){
+    //
+    //     for (let j = 0; j < n; j++){
+    //         let flag = true;
+    //         let num = parseInt(numArray[i][j]);
+    //         if (num < 2){
+    //             flag = false;
+    //         }else if (num == 2){
+    //             flag = true;
+    //         }else if (num % 2 == 0){
+    //             flag = false;
+    //         }else {
+    //             for (let i = 3; i < num -1; i += 2){
+    //                 if (num % i == 0){
+    //                     flag = false;
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //         if (flag == true){
+    //             allInteger.push(num);
+    //         }
+    //     }
+    // }
+    // console.log(allInteger);
+    // document.writeln(allInteger);
+    // document.writeln('<br/>' + allInteger.length);
+
+
+
+    //Bài 3:
+    let numArray = [];
+    let m = parseInt(prompt('Nhập số hàng'));
+    let n = parseInt(prompt('Nhập số cột'));
+
+    while (m <= 0 || n <= 0){
+        m = parseInt(prompt('Nhập số hàng'));
+        n = parseInt(prompt('Nhập số cột'));
+    }
+
+    for (let i = 0; i < m; i++){
+        numArray[i] = [];
+        for (let j = 0; j < n; j++){
+            numArray[i][j] = parseInt(prompt('nhập số vào tọa độ : ' + i + ':' + j));
+        }
+    }
+    console.log(numArray);
+
+    let max =  0;
+    let min = numArray[0][0];
+    for (let i = 0; i <m; i++){
+        for (let j = 0; j < n; j++){
+            if (numArray[i][j] > max){
+                max = numArray[i][j];
+            }
+            if (numArray[i][j] < min){
+                min = numArray[i][j];
+            }
+        }
+    }
+    document.writeln('max :' + max);
+    document.writeln('min :' + min);
+
+
+</script>
