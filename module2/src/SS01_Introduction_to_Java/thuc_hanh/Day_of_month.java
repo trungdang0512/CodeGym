@@ -2,17 +2,18 @@ package SS01_Introduction_to_Java.thuc_hanh;
 
 import java.util.Scanner;
 
-public class day_of_month {
+public class Day_of_month {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Which month that you want to count day?");
+        System.out.print("Bạn muốn biết số ngày trong tháng nào? ");
         int month = scanner.nextInt();
+        String dayInMonth;
+
         switch (month){
             case 2:
-                System.out.print("The month '2' has 28 or 29 days");
+                dayInMonth = "28 hoặc 29 ngày";
                 break;
-
             case 1:
             case 3:
             case 5:
@@ -20,18 +21,18 @@ public class day_of_month {
             case 8:
             case 10:
             case 12:
-                System.out.print("The month '" + month + "' has 31 days!");
-//                cách viết thứ 2: month truyền vào '%s'
-//                System.out.printf("The month '%s' has 31 days!", month);
+                dayInMonth = "31";
                 break;
             case 4:
             case 6:
             case 9:
             case 11:
-                System.out.print("The month '" + month + "' has 31 days!");
-                break;
+               dayInMonth = "30";
+               break;
             default:
-                System.out.print("Invalid Input!");
+               dayInMonth = "";
         }
+        if (!dayInMonth.equals("")) System.out.printf("Tháng '%d' có %s ngày!", month, dayInMonth);
+        else System.out.print("Số tháng không hợp lệ!");
     }
 }

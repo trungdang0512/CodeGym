@@ -2,10 +2,11 @@ package SS01_Introduction_to_Java.thuc_hanh;
 
 import java.util.Scanner;
 
-public class pt_bac_nhat {
+public class PT_bac_nhat {
     public static void main(String[] args) {
         System.out.println("Linear Equation Resolver");
-        System.out.println("Given a equation as 'a * x + b = c', please enter constants: ");
+        System.out.println("Given a equation as 'a  * x + b = c', please enter constants:");
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("a: ");
@@ -18,13 +19,14 @@ public class pt_bac_nhat {
         double c = scanner.nextDouble();
 
         if (a != 0){
-            double answer = (c - b)/a;
-            System.out.printf("Equation pass with x = %f!\n", answer);
-        } else {
-            if (b == c){
-                System.out.print("The solution is all x!");
+            double answer = (c-b)/a;
+            System.out.printf("PT 1 nghiem voi x = %f!\n", answer);
+        }
+        else {
+            if (b==c){
+                System.out.printf("PT vo so nghiem");
             }else {
-                System.out.print("No solution!");
+                System.out.printf("PT vo nghiem!");
             }
         }
     }
