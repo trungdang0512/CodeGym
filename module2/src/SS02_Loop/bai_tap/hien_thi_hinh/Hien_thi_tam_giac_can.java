@@ -1,4 +1,4 @@
-package SS02_Loop.bai_tap;
+package SS02_Loop.bai_tap.hien_thi_hinh;
 
 import java.util.Scanner;
 
