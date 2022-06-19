@@ -15,11 +15,14 @@ public class BT_xoa_phan_tu {
             for (int i = 0; i < array.length; i++) {
                 if ( array[i] == x) {
                     System.out.println("Phần tử " + x + " nằm ở vị trí " + (i + 1));
-                    indexDel = array[i] ;
-                    for (int j = i; j < array.length - i; j++){
-                        change = array[i+1];
-                        array[i] = change;
+
+                    for (int j = i+1; j < array.length; j++){
+                        change = array[j - 1];
+                        array[j - 1] = array[j];
+                        array[j] = change;
                     }
+                    array[array.length - 1] = 0;
+                    break;
                 }
             }
 

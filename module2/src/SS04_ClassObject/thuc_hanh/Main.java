@@ -1,7 +1,5 @@
 package SS04_ClassObject.thuc_hanh;
 
-import SS04_ClassObject.bai_tap.QuadraticEquation;
-
 import java.util.Scanner;
 
 public class Main {
