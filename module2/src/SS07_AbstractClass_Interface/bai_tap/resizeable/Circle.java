@@ -1,7 +1,12 @@
-package SS06_KeThua.thuc_hanh;
+package SS07_AbstractClass_Interface.bai_tap.resizeable;
 
-public class Circle extends Shape {
+import SS06_KeThua.thuc_hanh.Shape;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Circle extends Shape implements Resizeable {
     public double radius = 1.0;
+
 
     public Circle(String color, boolean filled, double radius) {
         super(color, filled);
@@ -31,11 +36,17 @@ public class Circle extends Shape {
         return 2*radius*Math.PI;
     }
 
+
     @Override
     public String toString() {
         return "A Circle with radius = "
                 + getRadius()
                 + ", which is a sub class of "
                 + super.toString();
+    }
+
+    @Override
+    public double resize(double random){
+        return getRadius()* random;
     }
 }
