@@ -3,7 +3,7 @@ package SS10_StackQueue.bai_tap.BT_trien_khai_queue;
 import java.util.Scanner;
 
 public class Solution {
-    private static Queue queue=new Queue();
+    private static Queue<Integer> queue=new Queue<>();
     public static void main(String[] args) {
         enQueue();
         System.out.println();

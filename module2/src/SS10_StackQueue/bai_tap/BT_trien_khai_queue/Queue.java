@@ -1,6 +1,6 @@
 package SS10_StackQueue.bai_tap.BT_trien_khai_queue;
 
-public class Queue {
+public class Queue<P> {
     private Node front;
     private Node rear;
 
