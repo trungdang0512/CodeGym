@@ -1,11 +1,30 @@
 package SS14_ExceptionDebug.bai_tap;
 
+import java.util.Scanner;
+
 public class TriangleCheck {
-    public void checkTriangle(double a, double b, double c) throws TriangleException{
-        if ( a + b <= c || a + c <= b || b + c <= a){
-            throw new TriangleException("Error: Tam giác không hợp lệ!!!");
+
+    public static void inputTriangle() throws TriangleException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input a:");
+        int a = scanner.nextInt();
+        System.out.println("Input b:");
+        int b = scanner.nextInt();
+        System.out.println("Input c:");
+        int c = scanner.nextInt();
+
+        if (a+b <= c || b+c <= a || c+a <= b){
+            throw new TriangleException("Invalid Triangle!!!");
         }else {
-            System.out.println("Tam giác hợp lệ !!!");
+            System.out.println("Valid Triangle <3");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            inputTriangle();
+        }catch (TriangleException e){
+            System.err.println(e.getMessage());
         }
     }
 }
